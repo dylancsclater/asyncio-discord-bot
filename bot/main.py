@@ -12,8 +12,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.content.contains("superior"):
-        with open('image.png', 'rb') as fp:
-            await channel.send(file=discord.File(fp, 'new_image.png'))
+        await channel.send("All-time Win Record: Dylan Sclater: 4 vs Dylan Feeney:0"))
 
 
 if __name__ == "__main__":
