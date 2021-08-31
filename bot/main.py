@@ -12,8 +12,10 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.content.startswith("superior"):
-        await message.channel.send(file=discord.File('image.png'))
+    if message.content.contains("superior"):
+        with open('image.png', 'rb') as fh:
+            image = discord.File(fh)
+            await message.channel.send(file=image)
 
 
 # @bot.event
