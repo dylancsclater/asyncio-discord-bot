@@ -12,7 +12,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    await bot.send_message(message.channel, "it worked")
+    if message.content.startswith("superior"):
+        await message.channel.send("it worked")
 
 
 # @bot.event
