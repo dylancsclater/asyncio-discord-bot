@@ -1,7 +1,8 @@
 import os
-from discord.ext import commands
+from discord import Client
 
-bot = commands.Bot(command_prefix="!")
+bot = Client()
+
 TOKEN = os.getenv("DISCORD_TOKEN")
 keyword = "SUPERIOR"
 
@@ -11,9 +12,9 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-        message_text = message.content.strip().upper()
-	if keyword in message_text:
-		await bot.send_message(message.channel, "it worked")
+    message_text = message.content.strip().upper()
+    if keyword in message_text:
+        await bot.send_message(message.channel, "it worked")
 
 if __name__ == "__main__":
     bot.run(TOKEN)
