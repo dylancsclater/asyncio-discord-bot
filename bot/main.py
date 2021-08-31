@@ -8,9 +8,10 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
-@bot.command()
-async def superior(ctx):
-    await ctx.reply("pong")
+@bot.listen()
+async def superior(message):
+    if message.content.startswith("Superior"):
+	message.channel.send("Dylan Sclater is the Superior Dylan")
 
 if __name__ == "__main__":
     bot.run(TOKEN)
