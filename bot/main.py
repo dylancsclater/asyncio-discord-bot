@@ -9,7 +9,7 @@ keyword = "SUPERIOR"
 async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
-@bot.event()
+@bot.event
 async def on_message(message):
         message_text = message.content.strip().upper()
 	if keyword in message_text:
