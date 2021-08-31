@@ -9,7 +9,7 @@ async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
 @bot.listen()
-async def superior(message):
+async def on_message(message):
     if message.content.startswith("Superior"):
 	message.channel.send("Dylan Sclater is the Superior Dylan")
 
