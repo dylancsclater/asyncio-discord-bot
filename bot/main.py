@@ -1,6 +1,7 @@
 import os
 from discord import Client
 
+version = "test"
 bot = Client()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
