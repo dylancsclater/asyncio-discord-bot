@@ -2,7 +2,6 @@ import os
 from discord import Client
 
 bot = Client()
-
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 @bot.event
