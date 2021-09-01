@@ -10,7 +10,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.content.contains("superior"):
+    if "superior" in message.content
         await channel.send("All-time Win Record: Dylan Sclater: 4 vs Dylan Feeney: 0")
 
 
