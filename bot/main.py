@@ -1,7 +1,6 @@
 import os
-from discord import Client
+import discord
 
-version = "test"
 bot = Client()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
@@ -12,7 +11,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.content.startswith('superior'):
-        await channel.send("All-time Win Record: Dylan Sclater: 4 vs Dylan Feeney: 0")
+        await message.channel.send("All-time Win Record: Dylan Sclater - 4 vs Dylan Feeney - 0")
 
 
 if __name__ == "__main__":
