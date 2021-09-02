@@ -1,9 +1,8 @@
 import os
-import subprocess
 import discord
 
 bot = discord.Client()
-# TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 
 @bot.event
@@ -20,4 +19,4 @@ async def on_message(message):
 
 
 if __name__ == "__main__":
-    bot.run("ODgyMDI0MzQxNjAzMjM3OTU4.YS1XLg.lwViWNDOw64-7OROz6AfSr5z2eo")
+    bot.run(TOKEN)
